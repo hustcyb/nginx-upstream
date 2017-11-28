@@ -2,6 +2,7 @@ version: '3'
 services:
   proxy:
     container_name: proxy
+    # build: ./proxy
     image: nginx
     ports:
       - "80:80"
@@ -13,6 +14,7 @@ services:
 
   server1:
     container_name: server1
+    # build: ./server1
     image: nginx
     expose:
       - 80
@@ -21,6 +23,7 @@ services:
 
   server2:
     container_name: server2
+    # build: ./server2
     image: nginx
     expose:
       - 80
